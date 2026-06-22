@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import Rating from "../../components/Rating";
-import salePriceFunc from "../../helpers/func";
+import salePriceFunc from "../../helpers/Func.jsx";
 import apis from "../../config/apis";
 import { singleProduct } from "../../redux/actions/productActions";
 import { addToCart } from "../../redux/actions/cartActions";

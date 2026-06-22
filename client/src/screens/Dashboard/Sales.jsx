@@ -1,6 +1,6 @@
 import React from 'react'
 import Loader from '../../components/Loader'
-import ProductCard from '../../components/productCard'
+import ProductCard from '../../components/ProductCard.jsx'
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProducts } from "../../redux/actions/productActions";
 import { Link } from 'react-router-dom'

@@ -1,38 +1,38 @@
 const apis =[
    
-    "http://localhost:8000/api/products",
-    "http://localhost:8000/api/product",
-    "http://localhost:8000/",
-    "http://localhost:8000/api/sliders",
-    "http://localhost:8000/api/category",
-    "http://localhost:8000/api/unstitchs",
-    "http://localhost:8000/api/unstitch"            
+    "https://django-production-126c.up.railway.app/api/products",
+    "https://django-production-126c.up.railway.app/api/product",
+    "https://django-production-126c.up.railway.app/",
+    "https://django-production-126c.up.railway.app/api/sliders",
+    "https://django-production-126c.up.railway.app/api/category",
+    "https://django-production-126c.up.railway.app/api/unstitchs",
+    "https://django-production-126c.up.railway.app/api/unstitch"            
     
     
 ]
 
 export const authApis = {
-    register: "http://localhost:8000/api/auth/register/",
-    token: "http://localhost:8000/api/token/",    // ← /api/ add kiya
-    login: "http://localhost:8000/api/auth/login/",
-    forgotPassword: "http://localhost:8000/api/forgot-password/",  // ye apke urls.py ke mutabik
-    tokenRefresh: "http://localhost:8000/api/token/refresh/", 
-    findUser: "http://localhost:8000/api/auth/find-user/",  
+    register: "https://django-production-126c.up.railway.app/auth/register/",
+    token: "https://django-production-126c.up.railway.app/api/token/",    // ← /api/ add kiya
+    login: "https://django-production-126c.up.railway.app/api/auth/login/",
+    forgotPassword: "https://django-production-126c.up.railway.app/api/forgot-password/",  // ye apke urls.py ke mutabik
+    tokenRefresh: "https://django-production-126c.up.railway.app/api/token/refresh/", 
+    findUser: "https://django-production-126c.up.railway.app/api/auth/find-user/",  
 };
 export const cartApis = {
-    base: "http://localhost:8000/api/cart/",
-    add: "http://localhost:8000/api/cart/add/",
-    remove: "http://localhost:8000/api/cart/remove/",
-    list: "http://localhost:8000/api/cart/",
-    clear: "http://localhost:8000/api/cart/clear/",  
+    base: "https://django-production-126c.up.railway.app/api/cart/",
+    add: "https://django-production-126c.up.railway.app/api/cart/add/",
+    remove: "https://django-production-126c.up.railway.app/api/cart/remove/",
+    list: "https://django-production-126c.up.railway.app/api/cart/",
+    clear: "https://django-production-126c.up.railway.app/api/cart/clear/",  
 };
 
 export const orderApis = {
-    create: "http://localhost:8000/api/orders/create/",
-    myOrders: "http://localhost:8000/api/orders/my-orders/",
-    orderDetails: (orderId) => `http://localhost:8000/api/orders/${orderId}/`,
-    allOrders: "http://localhost:8000/api/admin/orders/",
-    updateStatus: (orderId) => `http://localhost:8000/api/admin/orders/${orderId}/update-status/`,
+    create: "https://django-production-126c.up.railway.app/orders/create/",
+    myOrders: "https://django-production-126c.up.railway.app/api/orders/my-orders/",
+    orderDetails: (orderId) => `https://django-production-126c.up.railway.app/api/orders/${orderId}/`,
+    allOrders: "https://django-production-126c.up.railway.app/api/admin/orders/",
+    updateStatus: (orderId) => `https://django-production-126c.up.railway.app/api/admin/orders/${orderId}/update-status/`,
 };
 
 
