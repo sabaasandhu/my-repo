@@ -5,7 +5,7 @@ import { fetchCart } from "./cartActions";
 import { clearCart } from "../slices/cartSlice";
 import { authApis } from "../../config/apis";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://web-production-10987.up.railway.app";
 
 // ✅ Auto-check token validity on app start
 export const checkAuth = () => async (dispatch) => {
@@ -126,7 +126,7 @@ export const loginUser = (email, password) => async (dispatch) => {
   dispatch(setLoading());
   try {
     // OPTION 1: Direct JWT token request (email ko username ki tarah use karein)
-    const { data } = await axios.post("http://localhost:8000/api/token/", {
+    const { data } = await axios.post("await axios.post(`${BASE_URL}/api/token/`, ...)", {
       username: email,  // ✅ Email ko direct username ki tarah bhejein
       password: password
     });
@@ -135,7 +135,7 @@ export const loginUser = (email, password) => async (dispatch) => {
     let userInfo;
     try {
       // Try to get user details from your existing endpoint
-      const userResponse = await axios.get("http://localhost:8000/api/auth/user/", {
+      const userResponse = await axios.get(`${BASE_URL}/api/auth/user/`, {
         headers: { Authorization: `Bearer ${data.access}` }
       });
       userInfo = userResponse.data;
@@ -175,7 +175,7 @@ export const loginUser = (email, password) => async (dispatch) => {
         const users = await User.objects.filter(email=email).first();
         if (users) {
           // Dobara try karein with actual username
-          const { data } = await axios.post("http://localhost:8000/api/token/", {
+          const { data } = await axios.post(`${BASE_URL}/api/token/`, {
             username: users.username,
             password: password
           });

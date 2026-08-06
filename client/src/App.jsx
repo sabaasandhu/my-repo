@@ -96,7 +96,7 @@ const App = () => {
             <Route path='/checkout' element={<Checkout/>}/>
             <Route path='/order-confirmation' element={<OrderConfirmation/>}/>
 
-              <Route path='http://localhost:8000/admin/' />
+              <Route path='https://web-production-10987.up.railway.app/admin/' />
 
               </Routes>
     </Router>

@@ -150,12 +150,7 @@ const OrderConfirmation = () => {
                 Continue Shopping
               </Link>
               
-              <button
-                onClick={() => navigate("/user/orders")}
-                className="flex-1 border-2 border-teal-600 text-teal-600 hover:bg-teal-50 font-bold py-4 rounded-lg transition"
-              >
-                View My Orders
-              </button>
+            
             </div>
             
             {/* Support Info */}

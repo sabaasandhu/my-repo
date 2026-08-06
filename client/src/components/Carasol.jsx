@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
+import w from "../image/w.jpg";
+import r from "../image/r.png";
+import v from "../image/v.jpg";
 
 const Carasol = ({ category }) => {
   let slides = [];
@@ -21,9 +24,11 @@ const Carasol = ({ category }) => {
     ];
   } else {
     slides = [
-      "https://styka.pk/cdn/shop/files/Styka-01.webp?v=1764914779&width=1370",
-      "https://styka.pk/cdn/shop/files/Styka-03.webp?v=1764914779&width=1370",
-      "https://www.mariab.pk/cdn/shop/files/Luxury_Pret_Web_Banner_02.jpg?v=1763444782",
+      v,
+      r,
+      w,
+
+      //"https://www.mariab.pk/cdn/shop/files/Luxury_Pret_Web_Banner_02.jpg?v=1763444782",
     ];
   }
 
@@ -40,14 +45,18 @@ const Carasol = ({ category }) => {
   );
 
   return (
-    <div className="embla overflow-hidden" ref={emblaRef}>
+    <div className="embla overflow-hidden w-full" ref={emblaRef}>
       <div className="embla__container flex">
         {slides.map((img, i) => (
-          <div className="embla__slide min-w-full" key={i}>
+          <div
+            className="embla__slide flex-[0_0_100%] min-w-0"
+            key={i}
+          >
             <img
               src={img}
-              className="w-full h-[250px] md:h-[450px] object-cover rounded-xl"
+              className="w-full h-[180px] xs:h-[220px] sm:h-[300px] md:h-[400px] lg:h-[450px] object-cover rounded-xl select-none"
               alt=""
+              draggable="false"
             />
           </div>
         ))}

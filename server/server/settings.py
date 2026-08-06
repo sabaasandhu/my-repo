@@ -35,26 +35,28 @@ SECRET_KEY = 'django-insecure--4^j2f*1dro3t)6g!0p!trx6l-o2ekduvdp9@qf@ado_k@+m^4
 #     "localhost",
 # ]
 
-DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://localhost:3000",
-    "https://react-1z36-lm1r8qm7u-sabaasandhus-projects.vercel.app",  # ✅ Apna Vercel URL
-    "https://react-1z36.vercel.app",  # ✅ Agar yeh bhi use kar rahe hain
+ALLOWED_HOSTS = [
+    "web-production-10987.up.railway.app",
+    "127.0.0.1",
+    "localhost",
+    ".vercel.app",
+    "react-1z36-lm1r8qm7u-sabaasandhus-projects.vercel.app",
+    "react-1z36.vercel.app",
 ]
 
-# CSRF_TRUSTED_ORIGINS
 CSRF_TRUSTED_ORIGINS = [
-    "https://django-production-126c.up.railway.app",
-    "https://react-1z36.vercel.app",  # ✅ Apna Vercel URL
+    "https://web-production-10987.up.railway.app",
+    "https://react-1z36-lm1r8qm7u-sabaasandhus-projects.vercel.app",
+    "https://react-1z36.vercel.app",
 ]
 
 # CORS_ALLOWED_ORIGINS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://react-1z36.vercel.app",  # ✅ Apna Vercel URL
+    "https://react-1z36-lm1r8qm7u-sabaasandhus-projects.vercel.app",
+    "https://react-1z36.vercel.app",
 ]
 # Application definition
 
@@ -77,6 +79,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,6 +87,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ROOT_URLCONF = 'server.urls'
 
 TEMPLATES = [
@@ -202,7 +206,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 

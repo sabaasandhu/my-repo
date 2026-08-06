@@ -27,7 +27,7 @@ const isAdmin = user && user.is_staff === true
 
 
   return (
-     <div className='max-w-8xl mx-auto px-5 sm:px-9 mb-3'>
+     <div className='max-w-8xl mx-auto px-5 sm:px-9 mb-3 mt-10'>
 
            
       
@@ -44,7 +44,7 @@ const isAdmin = user && user.is_staff === true
   ) : <div className="bg-red-300 w-64 items-center p-2 rounded-lg animate-bounce text-lg font-bold text-center text-red-700 border-1 border-red-600">
           Coming Soon 🎁
           {isAdmin && (
-            <Link className='text-red-900 font-bold underline' to="http://localhost:8000/admin/" > Add New Product </Link>
+            <Link className='text-red-900 font-bold underline' to="https://web-production-10987.up.railway.app/admin/" > Add New Product </Link>
           )}
         </div>
 }
